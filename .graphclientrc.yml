@@ -1,0 +1,8 @@
+sources:
+  - name: tfm-subgraph-mumbai
+    handler:
+      graphql:
+        endpoint: https://api.thegraph.com/subgraphs/name/pdemicheli/tfm-subgraph
+
+documents:
+  - ./helpers/subgraph/tfm.graphql

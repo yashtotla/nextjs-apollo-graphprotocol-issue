@@ -1,0 +1,39 @@
+yarn run v1.22.19
+$ next build
+info  - Linting and checking validity of types  
+warn  - Compiled with warnings
+
+./node_modules/@graphql-mesh/utils/esm/defaultImportFn.js
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/@graphql-mesh/utils/esm/defaultImportFn.js
+./node_modules/@graphql-mesh/utils/esm/index.js
+./.graphclient/index.ts
+
+./node_modules/@graphql-tools/url-loader/esm/index.js
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/@graphql-tools/url-loader/esm/index.js
+./node_modules/@graphql-mesh/graphql/esm/index.js
+./.graphclient/index.ts
+
+unhandledRejection file:///Users/yashtotla/Desktop/TruFin%20-%20Engineering/archive/github-issue/node_modules/@graphql-mesh/apollo-link/esm/index.js:1
+import { ApolloLink, Observable } from '@apollo/client';
+         ^^^^^^^^^^
+SyntaxError: Named export 'ApolloLink' not found. The requested module '@apollo/client' is a CommonJS module, which may not support all module.exports as named exports.
+CommonJS modules can always be imported via the default export, for example using:
+
+import pkg from '@apollo/client';
+const { ApolloLink, Observable } = pkg;
+
+    at ModuleJob._instantiate (node:internal/modules/esm/module_job:123:21)
+    at async ModuleJob.run (node:internal/modules/esm/module_job:189:5)
+    at async Promise.all (index 0)
+    at async ESMLoader.import (node:internal/modules/esm/loader:530:24)
+    at async importModuleDynamicallyWrapper (node:internal/vm/module:438:15) {
+  type: 'SyntaxError'
+}
+error Command failed with exit code 1.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.

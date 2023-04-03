@@ -1,0 +1,16 @@
+query positions($userAddress: Bytes) {
+  strategies(
+    where: {and: [{deleted: false}, {or: [{alpha: $userAddress}, {omega: $userAddress}]}]}
+    orderBy: expiry
+    orderDirection: desc
+    first: 1000
+  ) {
+    bra
+    ket
+    basis
+    expiry
+    wavefn {
+      id
+    }
+  }
+}
